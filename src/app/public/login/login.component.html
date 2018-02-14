@@ -1,0 +1,32 @@
+
+
+<div class="container">
+  <div class="card"></div>
+  <div class="card">
+    <h1 class="title">Login</h1>
+    <form (ngSubmit)="onSubmit($event)">
+
+
+      <div class="input-container">
+        <mat-form-field [color]="accent">
+          <input matInput placeholder="Usuario" [formControl]="username" required>
+          <mat-error *ngIf="username.invalid">{{getErrorMessageForUser()}}</mat-error>
+        </mat-form-field>
+      </div>
+
+      <div class="input-container">
+        <mat-form-field [color]="accent" >
+          <input matInput type="password" placeholder="Contraseña" [formControl]="password" required>
+          <mat-error *ngIf="password.invalid">{{getErrorMessageForPassword()}}</mat-error>
+        </mat-form-field>
+      </div>
+
+      <div class="button-container b-submit clearfix">
+        <button [disabled]="username.invalid || password.invalid" >
+          <span>Iniciar</span>
+        </button>
+      </div>
+
+    </form>
+  </div>
+</div>
