@@ -10,12 +10,21 @@ export const routes: Routes = [
     path: '', pathMatch: 'full', redirectTo: '/login'
   },
   {
-    path: 'login', component: LoginComponent, pathMatch: 'full', canActivate: [ PublicGuard ]
+    path: 'login', component: LoginComponent, pathMatch: 'full'
   },
   {
-    path: 'home', component: HomeComponent, data: { name: 'Home' }, canActivate: [ AuthGuard ]
+    path: 'home', component: HomeComponent, data: { name: 'Home' }
   },
   {
     path: '**', component: NotFoundComponent
   }
 ];
+
+/*
+  {
+    path: 'login', component: LoginComponent, pathMatch: 'full', canActivate: [ PublicGuard ]
+  },
+  {
+    path: 'home', component: HomeComponent, data: { name: 'Home' }, canActivate: [ AuthGuard ]
+  },
+ */

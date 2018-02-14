@@ -32,6 +32,8 @@ export class LoginComponent implements OnInit {
 
   onSubmit(event: Event) {
     event.preventDefault();
+    this.router.navigate(['/home']);
+    /*
     this.authService.logIn(this.username.value, this.password.value)
       .subscribe((data) => {
         this.authService.user = data;
@@ -44,5 +46,6 @@ export class LoginComponent implements OnInit {
         console.error(error);
         this.authService.hasSession = false;
       });
+    */
   }
 }
