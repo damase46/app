@@ -1,35 +1,36 @@
 
 // Main Colors
 $white: #ffffff;
-$accent: #E91E63;
+$accent: #0097A7;
 
-$max-width: 460px;
+$max-width: 400px;
+
+.flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
 
 /* Container */
 .container {
-  position: relative;
   max-width: $max-width;
   width: 100%;
-  margin: 0 auto 100px;
 
 }
 
 /* Card */
 .card {
-  position: relative;
   background: $white;
   border-radius: 10px;
   padding: 60px 0 40px 0;
   box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.12), 0 6px 9px rgba(0, 0, 0, 0.24);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.12), 0 6px 9px rgba(0, 0, 0, 0.24);
+  -webkit-transition: .3s ease;
   transition: .3s ease;
-
-  &:first-child {
-    background: darken($white, 2%);
-    height: 10px;
-    border-radius: 5px 5px 0 0;
-    margin: 0 10px;
-    padding: 0;
-  }
 
   /* Title */
   .title {
@@ -66,20 +67,21 @@ $max-width: 460px;
       position: relative;
       display: inline-block;
       background: 0;
-      width: 240px;
+      width: 220px;
       border: 2px solid #e3e3e3;
-      padding: 20px 0;
-      font-size: 24px;
+      padding: 15px 0;
+      font-size: 22px;
       font-weight: 600;
       line-height: 1;
       text-transform: uppercase;
       overflow: hidden;
       transition: .3s ease;
+      border-radius: 10px;
 
       span {
         position: relative;
         z-index: 1;
-        color: #ddd;
+        color: $accent;
         transition: .3s ease;
       }
 
@@ -120,6 +122,30 @@ $max-width: 460px;
         }
       }
     }
+  }
+
+  .material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 22px;  /* Preferred icon size */
+    display: inline-block;
+    line-height: 3;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+    width: 2em;
+
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+    /* Support for IE. */
+    font-feature-settings: 'liga';
   }
 
 }

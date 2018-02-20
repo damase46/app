@@ -19,7 +19,7 @@ import {PublicGuard} from './common/guards/public.guard';
 import {AuthGuard} from './common/guards/auth.guard';
 import {AuthenticationService} from './common/services/authentication.service';
 import {Ng2Webstorage} from 'ngx-webstorage';
-
+import {MatIconModule} from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -39,6 +39,7 @@ import {Ng2Webstorage} from 'ngx-webstorage';
     FormsModule,
     MatButtonModule,
     MatFormFieldModule,
+    MatIconModule,
     MatInputModule,
     Ng2Webstorage
   ],
